@@ -1,0 +1,347 @@
+/* --------------------- layer --------------------*/
+.slider-container{
+    position: relative;
+    top:0;
+    left: 0;
+    right: 0;
+    height: 100%;
+}
+#slider1, #slider2{
+    width: 100vw;
+    height: 100%;
+    /* height: 100%; */
+    /* padding-bottom: 20%; */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.slider_left{
+    width: 40%;
+}
+.slider_left h1{
+    font-size: 4rem;
+}
+.slider_left p{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.slider_right{
+    width: 40%;
+    position: relative;
+}
+.slider_right svg {
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    transition: all 1s ease-in-out;
+}
+.slider_right .oval{
+    position: absolute;
+    top:10%;
+    left:20%;
+    width: 70%;
+    transition: 1s ease-in-out all;
+}
+.slider_right .shoes_float{
+    width: 80%;
+
+    position: absolute;
+    top:50%;
+    transform: translateX(20%);
+    transition: 1s ease-in-out all;
+}
+.slider_right h1{
+    width: 80%;
+    position: absolute;
+    color: var(--gray);
+    bottom: 0%;
+    left: 50%;
+    transition: .8s ease-in-out all;
+    font-size: .2rem;
+    opacity: 0;
+}
+.slider_right:hover svg{
+    transform: translateX(-5%);
+}
+.slider_right:hover .oval{
+    transform: translateX(-10px);
+}
+.slider_right:hover h1{
+    bottom:50%;
+    left: 22%;
+    color: var(--brown);
+    font-size: 1.8rem;
+    opacity: 1;
+}
+.slider_right:hover .shoes_float{
+    transform: translateX(10%);
+}
+#slider2{
+    display: none;
+}
+
+
+.btn-slider{
+    width: 80%;
+    margin:5% auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-slider .btn-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.btn-slider .btn-left > span{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--gray);
+}
+.btn-slider .btn-right span i{
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    background-color: var(--text-input);
+    color: var(--white);
+}
+.btn-slider .btn-right span i:hover{
+    background-color: var(--red);
+}
+.btn-slider .btn-left > .active{
+    background-color: var(--red);
+}
+#slider2 .slider_right h1{
+    margin-left: 5%;
+}
+/* --------------------- end-layer --------------------*/
+
+/* --------------------- policy --------------------*/
+.policy{
+    width: 100vw;
+    height: 170px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--bg_header);
+}
+.policy > div{
+    display: flex;
+    align-items: center;
+    gap:0 20px;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    box-shadow: 0 0 15px 10px var(--black-light);
+    transition: all .4s ease-in-out;
+}
+.policy > div:hover{
+    background-color: var(--red);
+    color: var(--white);
+    transform: translateY(-20px);
+}
+/* ---------------------end-policy --------------------*/
+/* --------------------- reference-products --------------------*/
+section .title{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+section .title > img{
+    width: 100%;
+}
+section .title div p{
+    color: var(--red);
+    letter-spacing: 10px;
+    font-size: 1.5em;
+    font-weight: 800;
+}
+section .title div h1{
+    font-size: 6em;
+    letter-spacing: 5px;
+}
+/* -----product----- */
+.products{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 50px 0;
+}
+.products div{
+    width: 20%;
+}
+.products div img{
+    max-width: 100%;
+}
+.products div span{
+    display: block;
+}
+.products div .name_product{
+    font-weight: 600;
+}
+.products div .price{
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--red);
+}
+.category .title{
+    background:  var(--bg-category);
+    color: var(--white);
+}
+.category .title img{
+    margin-right: 10%;
+}
+.category .title >div{
+    margin-left: 10%;
+}
+/* --------------------- end-reference-products --------------------*/
+
+/* --------------------- benefits --------------------*/
+.benefits{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.benefits h1{
+    font-size: 3rem;
+    padding: 4rem 0;
+    
+}
+.benefits .box{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 0 30px;
+    
+}
+.benefits .box .box_policy {
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    gap:20px 0;
+    box-shadow: var(--box-shadow);
+    transition: all .3s ease-in-out;
+}
+.benefits .box .box_policy div h2{
+    margin-bottom: 10px;
+}
+.benefits .box .box_policy div p{
+    letter-spacing: 2px;
+    line-height: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.benefits .box .box_policy .fa-solid{
+    color: var(--red);
+    font-size: 3rem;
+    margin-right: 20px;
+    transition: all .3s ease-in-out;
+}
+.benefits .box .box_policy:hover{
+    background-color: var(--red);
+    color: var(--white);
+    transform: translateY(-10%);
+}
+.benefits .box .box_policy:hover .fa-solid{
+    color: var(--white);
+}
+/* --------------------- end-benefits --------------------*/
+
+/* --------------------- brand --------------------*/
+.brands{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.brands h1{
+    font-size: 3rem;
+    margin: 4rem 0;
+}
+.brands > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.brands>div >div{
+    width: 20%;
+}
+.brands div img{
+    max-width: 100%;
+    padding:1rem 3rem;
+    border-radius: 4px;
+    transition: all .2s linear;
+}
+.brands div img:hover{
+    box-shadow: var(--box-shadow);
+    transform: translateY(-10%);
+}
+/* --------------------- end-brand --------------------*/
+
+/* --------------------- black-friday --------------------*/
+.layer_black_friday{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--yellow-brown);
+    margin-top: 10%;
+}
+.layer_black_friday > div{
+    width: 50%;
+}
+.layer_black_friday .img_logo img{
+    max-width: 100%;
+}
+.layer_black_friday .infor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.layer_black_friday .infor p{
+    color: var(--white);
+    font-size: 1.5rem;
+}
+.layer_black_friday .infor h1{
+    color: var(--red);
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-shadow: 1px 1px 1px var(--black);
+}
+/* --------------------- end-black-friday --------------------*/
+
+/* --------------------- tradition --------------------*/
+.tradition{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10% 0;
+}
+.tradition h1{
+    font-size: 4rem;
+    font-weight: 600;
+    margin: 40px;
+}
+.tradition p{
+    max-width: 60%;
+    text-align: center;
+    margin: 10px 0;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+}
+/* --------------------- end-tradition --------------------*/
+
+
+/* =================== RESPONSIVE ============================= */
+@media screen and (max-width: 1024px){
+    
+}

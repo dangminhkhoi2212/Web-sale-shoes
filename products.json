@@ -1,0 +1,129 @@
+{
+    "lastest":{
+        "p01": {
+            "name": "Nike Air jordan Safari",
+            "img": "Images/Lastest/Nike-Air-Jordan-Safari.png",
+            "price": 249
+        },
+        "p02": {
+            "name": "Puma Fuse",
+            "img": "Images/Lastest/Puma-Fuse.png",
+            "price": 110
+        },
+        "p03": {
+            "name": "Puma Haribo RS X",
+            "img": "Images/Lastest/Puma-Haribo-RS-X.png",
+            "price": 110.000
+        },
+        "p04": {
+            "name": "Puma Mix Sport",
+            "img": "Images/Lastest/Puma-Mix-Sport.png",
+            "price": 110.000
+        },
+        "p05": {
+            "name": "Vans RAPIDWELD",
+            "img": "Images/Lastest/Vans-RAPIDWELD.png",
+            "price": 110.000
+        },
+        "p06": {
+            "name": "Vans Dark Aura Multi True",
+            "img": "Images/Lastest/Vans-Dark-Aura-Multi-True.png",
+            "price": 110.000
+        },
+        "p07": {
+            "name": "Vans Skate Old School",
+            "img": "Images/Lastest/Vans-Skate-Old-School.png",
+            "price": 110.000
+        },
+        "p08": {
+            "name": "Vans Ultrarange Exo",
+            "img": "Images/Lastest/Vans-Ultrarange-Exo.png",
+            "price": 110.000
+        }
+    },
+    "category":{
+        "p01": {
+            "name": "Nike Air jordan Safari",
+            "img": "Images/Lastest/Nike-Air-Jordan-Safari.png",
+            "price": 249
+        },
+        "p02": {
+            "name": "Nike AF",
+            "img": "Images/Category/Nike AF.png",
+            "price": 249
+        },
+        "p03": {
+            "name": "Nike Air Max 270",
+            "img": "Images/Category/Nike Air Max 270.png",
+            "price": 249
+        },
+        "p04": {
+            "name": "Nike Air Max 2021",
+            "img": "Images/Category/Nike Air Max 2021.png",
+            "price": 249
+        },
+        "p05": {
+            "name": "Nike Air VaporMax Plus",
+            "img": "Images/Category/Nike Air VaporMax Plus.png",
+            "price": 249
+        },
+
+        "p06": {
+            "name": "Nike Air Force 1",
+            "img": "Images/Category/Nike Air Force 1.png",
+            "price": 249
+        },
+        "p07": {
+            "name": "Nike Jordan 24",
+            "img": "Images/Category/Nike Jordan 24.png",
+            "price": 249
+        },
+        "p08": {
+            "name": "Nike Metcon 7",
+            "img": "Images/Category/Nike Metcon 7.png",
+            "price": 249
+        }
+    },
+    "best_sellings":{
+        "p01": {
+            "name": "Adidas Cloud White",
+            "img": "Images/BestSellings/Adidas Cloud White.png",
+            "price": 249
+        },
+        "p02": {
+            "name": "Adidas Forum MID",
+            "img": "Images/BestSellings/Adidas Forum MID.png",
+            "price": 249
+        },
+        "p03": {
+            "name": "Adidas KAPTIR SUPER",
+            "img": "Images/BestSellings/Adidas KAPTIR SUPER.png",
+            "price": 249
+        },
+        "p04": {
+            "name": "Adidas Superstar Pure",
+            "img": "Images/BestSellings/Adidas Superstar Pure.png",
+            "price": 249
+        },
+        "p05": {
+            "name": "Nike Air Jordan Safari",
+            "img": "Images/BestSellings/Nike Air Jordan Safari.png",
+            "price": 249
+        },
+        "p06": {
+            "name": "Nike Free Run 2",
+            "img": "Images/BestSellings/Nike Free Run 2.png",
+            "price": 249
+        },
+        "p07": {
+            "name": "Puma Haribo RS-X",
+            "img": "Images/BestSellings/Puma Haribo RS-X.png",
+            "price": 249
+        },
+        "p08": {
+            "name": "Adidas Alpha Beyond",
+            "img": "Images/BestSellings/Adidas Alpha Beyond.png",
+            "price": 249
+        }
+    }
+}
