@@ -1,323 +1,422 @@
 /* --------------------- layer --------------------*/
-.slider-container{
+
+.slider-container {
     position: relative;
-    top:0;
+    top: 0;
     left: 0;
     right: 0;
-    height: 100%;
 }
-#slider1, #slider2{
+
+.slider-main .slider-box {
+    /* display: flex; */
     width: 100vw;
+}
+
+#slider1,
+#slider2 {
+    padding: 2% 0;
     height: 100%;
-    /* height: 100%; */
     /* padding-bottom: 20%; */
     display: flex;
     justify-content: space-evenly;
 }
 
-.slider_left{
+.slider_left {
     width: 40%;
+    overflow: hidden;
 }
-.slider_left h1{
-    font-size: 4rem;
+
+.slider_left h1 {
+    max-width: 100%;
+    white-space: nowrap;
+    font-size: 3rem;
+    animation: runword 8s linear infinite;
 }
-.slider_left p{
+
+@keyframes runword {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+
+}
+
+.slider_left p {
     font-size: 1.5rem;
     font-weight: 500;
 }
 
-.slider_right{
+.slider_right {
     width: 40%;
+
     position: relative;
 }
-.slider_right svg {
-    width: 100vw;
-    height: 100%;
-    position: absolute;
-    z-index: -1;
-    transition: all 1s ease-in-out;
-}
-.slider_right .oval{
-    position: absolute;
-    top:10%;
-    left:20%;
-    width: 70%;
-    transition: 1s ease-in-out all;
-}
-.slider_right .shoes_float{
-    width: 80%;
 
-    position: absolute;
-    top:50%;
-    transform: translateX(20%);
-    transition: 1s ease-in-out all;
+.slider_right .oval-pink {
+    width: 50%;
+    height: 80%;
+    background-image: linear-gradient(to top, #ff00445d, #ff467e63, #ff70a955, #f895cf58, #ecb5e563);
+    box-shadow: 10px 10px 30px 5px #f895cf58;
+    transform: translate(40%, 20%) scale(1.6);
+    backdrop-filter: blur(5px);
+    margin-top: 5%;
+    animation: oval-pink 4s ease-in-out infinite;
 }
-.slider_right h1{
+
+@keyframes oval-pink {
+    0% {
+        border-radius: 27% 73% 46% 54% / 57% 38% 62% 43%;
+    }
+
+    50% {
+        border-radius: 54% 46% 59% 41% / 25% 75% 25% 75%;
+    }
+
+    100% {
+        border-radius: 27% 73% 46% 54% / 57% 38% 62% 43%;
+    }
+}
+
+.slider_right .shoes_float {
     width: 80%;
     position: absolute;
-    color: var(--gray);
-    bottom: 0%;
+    top: 50%;
     left: 50%;
-    transition: .8s ease-in-out all;
-    font-size: .2rem;
-    opacity: 0;
+    transform: translateX(-50%);
+    transition: 1s ease-in-out all;
 }
-.slider_right:hover svg{
-    transform: translateX(-5%);
+
+
+.slider_right:hover .shoes_float {
+    transform: translate(-50%, -20%) rotate(-15deg);
 }
-.slider_right:hover .oval{
-    transform: translateX(-10px);
-}
-.slider_right:hover h1{
-    bottom:50%;
-    left: 22%;
-    color: var(--brown);
-    font-size: 1.8rem;
-    opacity: 1;
-}
-.slider_right:hover .shoes_float{
-    transform: translateX(10%);
-}
-#slider2{
+
+#slider2 {
     display: none;
 }
 
 
-.btn-slider{
+.btn-slider {
     width: 80%;
-    margin:5% auto;
+    margin: 6% auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.btn-slider .btn-left{
+.btn-slider .btn-left {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
-.btn-slider .btn-left > span{
+
+.btn-slider .btn-left>span {
     width: 20px;
     height: 20px;
     border-radius: 50%;
     background-color: var(--gray);
 }
-.btn-slider .btn-right span i{
-    cursor: pointer;
+
+/* active dots */
+.btn-slider .btn-left>.active {
+    background-color: var(--red);
+}
+
+/* ----------- */
+.btn-slider .btn-right span {
+    width: 40px;
+    height: 40px;
     padding: 15px;
-    border-radius: 50%;
     background-color: var(--text-input);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.btn-slider .btn-right span .fa-solid {
     color: var(--white);
 }
-.btn-slider .btn-right span i:hover{
+
+.btn-slider .btn-right span:hover {
     background-color: var(--red);
 }
-.btn-slider .btn-left > .active{
-    background-color: var(--red);
-}
-#slider2 .slider_right h1{
+
+#slider2 .slider_right h1 {
     margin-left: 5%;
 }
+
 /* --------------------- end-layer --------------------*/
 
 /* --------------------- policy --------------------*/
-.policy{
+.policy {
     width: 100vw;
     height: 170px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     background-color: var(--bg_header);
 }
-.policy > div{
+
+.policy>div {
     display: flex;
     align-items: center;
-    gap:0 20px;
-    padding: 20px 40px;
+    gap: 0 20px;
+    padding: 2% 5%;
     border-radius: 10px;
     font-size: 1.5rem;
     box-shadow: 0 0 15px 10px var(--black-light);
-    transition: all .4s ease-in-out;
+    transition: all .3s ease-in-out;
 }
-.policy > div:hover{
+
+.policy div i {
+    color: var(--red);
+}
+
+.policy>div:hover {
     background-color: var(--red);
     color: var(--white);
-    transform: translateY(-20px);
+    transform: translateY(-15%);
 }
+
+.policy>div:hover i {
+    color: var(--white);
+}
+
 /* ---------------------end-policy --------------------*/
 /* --------------------- reference-products --------------------*/
-section .title{
+
+section .title {
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
-section .title > img{
+
+section .title>img {
     width: 100%;
 }
-section .title div p{
+
+section .title div p {
     color: var(--red);
     letter-spacing: 10px;
     font-size: 1.5em;
     font-weight: 800;
 }
-section .title div h1{
+
+section .title div h1 {
     font-size: 6em;
     letter-spacing: 5px;
 }
-/* -----product----- */
-.products{
+
+.products {
+
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 20px 2%;
     margin: 50px 0;
 }
-.products div{
-    width: 20%;
-}
-.products div img{
+
+.products div {
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 50px 0.1px var(--black-light);
+    border-radius: 10px;
+    padding: 2%;
+    transition: all .2s linear;
+    cursor: pointer;
+    border-radius: 14px;
+    box-shadow: 10px 10px 20px #d9d9d9,
+        -10px -10px 20px #ffffff;
+    }
+    
+    .products div:hover {
+        transform: scale(1.03);
+    }
+
+.products div img {
     max-width: 100%;
 }
-.products div span{
-    display: block;
+
+.products div span {
+    padding: 2%;
 }
-.products div .name_product{
+
+.products div .name_product {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 3rem;
+    line-height: 1.5rem;
     font-weight: 600;
+    flex-grow: 1;
 }
-.products div .price{
+
+.products div .price {
     font-weight: 800;
     font-size: 1.2rem;
     color: var(--red);
 }
-.category .title{
-    background:  var(--bg-category);
+
+.category .title {
+    background-color: var(--bg-category);
     color: var(--white);
+    /* width: 100vw; */
 }
-.category .title img{
+
+.category .title>img {
     margin-right: 10%;
 }
-.category .title >div{
+
+.category .title>div {
     margin-left: 10%;
 }
+
 /* --------------------- end-reference-products --------------------*/
 
 /* --------------------- benefits --------------------*/
-.benefits{
+.benefits {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-.benefits h1{
+
+.benefits h1 {
     font-size: 3rem;
     padding: 4rem 0;
-    
+
 }
-.benefits .box{
+
+.benefits .box {
     display: flex;
     justify-content: space-evenly;
     gap: 0 30px;
-    
+
 }
+
 .benefits .box .box_policy {
     padding: 20px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    gap:20px 0;
+    gap: 20px 0;
     box-shadow: var(--box-shadow);
     transition: all .3s ease-in-out;
 }
-.benefits .box .box_policy div h2{
+
+.benefits .box .box_policy div h2 {
     margin-bottom: 10px;
 }
-.benefits .box .box_policy div p{
+
+.benefits .box .box_policy div p {
     letter-spacing: 2px;
     line-height: 2rem;
     font-size: 1rem;
     font-weight: 500;
 }
-.benefits .box .box_policy .fa-solid{
+
+.benefits .box .box_policy .fa-solid {
     color: var(--red);
     font-size: 3rem;
     margin-right: 20px;
     transition: all .3s ease-in-out;
 }
-.benefits .box .box_policy:hover{
+
+.benefits .box .box_policy:hover {
     background-color: var(--red);
     color: var(--white);
     transform: translateY(-10%);
 }
-.benefits .box .box_policy:hover .fa-solid{
+
+.benefits .box .box_policy:hover .fa-solid {
     color: var(--white);
 }
+
 /* --------------------- end-benefits --------------------*/
 
 /* --------------------- brand --------------------*/
-.brands{
+.brands {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 }
-.brands h1{
+
+.brands h1 {
     font-size: 3rem;
     margin: 4rem 0;
 }
-.brands > div {
+
+.brands>div {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.brands>div >div{
+
+.brands>div>div {
     width: 20%;
 }
-.brands div img{
-    max-width: 100%;
-    padding:1rem 3rem;
+
+.brands div img {
+    padding: 1rem 3rem;
     border-radius: 4px;
     transition: all .2s linear;
 }
-.brands div img:hover{
+
+.brands div img:hover {
     box-shadow: var(--box-shadow);
     transform: translateY(-10%);
 }
+
 /* --------------------- end-brand --------------------*/
 
 /* --------------------- black-friday --------------------*/
-.layer_black_friday{
+.layer_black_friday {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     background-color: var(--yellow-brown);
     margin-top: 10%;
 }
-.layer_black_friday > div{
+
+.layer_black_friday>div {
     width: 50%;
 }
-.layer_black_friday .img_logo img{
+
+.layer_black_friday .img_logo img {
     max-width: 100%;
 }
-.layer_black_friday .infor{
+
+.layer_black_friday .infor {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
 }
-.layer_black_friday .infor p{
+
+.layer_black_friday .infor p {
     color: var(--white);
     font-size: 1.5rem;
+    text-align: center;
 }
-.layer_black_friday .infor h1{
+
+.layer_black_friday .infor h1 {
     color: var(--red);
     font-size: 2.5rem;
     font-weight: 800;
     text-shadow: 1px 1px 1px var(--black);
+    text-align: center;
 }
+
 /* --------------------- end-black-friday --------------------*/
 
 /* --------------------- tradition --------------------*/
-.tradition{
+.tradition {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -325,23 +424,297 @@ section .title div h1{
     justify-content: center;
     margin: 10% 0;
 }
-.tradition h1{
+
+.tradition h1 {
     font-size: 4rem;
     font-weight: 600;
     margin: 40px;
-}
-.tradition p{
-    max-width: 60%;
     text-align: center;
+}
+
+.tradition p {
+    max-width: 60%;
+    text-align: justify;
     margin: 10px 0;
     font-size: 1.2rem;
     line-height: 1.5rem;
     font-weight: 500;
 }
+
 /* --------------------- end-tradition --------------------*/
 
 
 /* =================== RESPONSIVE ============================= */
-@media screen and (max-width: 1024px){
-    
+@media screen and (max-width: 1024px) {
+    .slider-main .slider_left h1 {
+        font-size: 1.8rem;
+        margin-top: 5%;
+    }
+
+    section .title img {
+        max-width: 50%;
+    }
+
+    section .title div h1 {
+        font-size: 4rem;
+    }
+
+    .products {
+        gap: 40px 2%;
+    }
+
+    .products div {
+        width: 23%;
+    }
+
+    .policy div {
+        padding: 2%;
+    }
+
+    .benefits .box {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .brands div img {
+        padding: 10%;
+    }
+
+    .tradition h1 {
+        font-size: 2.5rem;
+        font-weight: 800;
+    }
+
+    footer .top .top_img div {
+        height: 70%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .button_hover {
+        padding: 20px;
+    }
+
+    .slider-main .slider-box .slider_right .oval-pink {
+        height: 55%;
+        /* margin-top: 25%; */
+    }
+
+    .slider-main .slider-box .slider_right .shoes_float {
+        top: 40%;
+    }
+
+    .policy {
+        flex-direction: column;
+
+        height: 300px;
+    }
+
+    .policy div {
+        width: 70%;
+        pad: 3%;
+    }
+
+    .policy div p {
+        font-size: 1.3rem;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    section .title {
+        flex-direction: column;
+    }
+
+    section .title div {
+        text-align: center;
+    }
+
+    section .title div h1 {
+        font-size: 3rem;
+    }
+
+    .products {
+        gap: 30px 4%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .products div {
+        width: 40%;
+    }
+
+    .category .title {
+        flex-direction: column-reverse;
+    }
+
+    .category .title img {
+        margin: 0;
+    }
+
+    .benefits .box {
+        width: 85%;
+    }
+
+    .brands>div {
+        justify-content: space-evenly;
+    }
+
+    footer .top {
+        display: none;
+    }
+
+    footer .mid {
+        flex-direction: column;
+    }
+
+    footer .mid>div {
+        align-items: flex-start;
+        width: 100vw;
+        padding: 0 5%;
+        margin: 4% 0;
+
+    }
+
+    .follow_us .charge_logo img {
+        float: left;
+    }
+}
+
+@media screen and (max-width: 601px) {
+    .slider-main .slider-box {
+        flex-direction: column-reverse;
+    }
+
+    .slider-main .slider-box .slider_left,
+    .slider-main .slider-box .slider_right {
+        width: 90%;
+        margin: 0 5%;
+    }
+
+    .slider-main .slider-box .slider_right {
+        height: 50%;
+    }
+
+    .slider-main .slider-box .slider_right .oval-pink {
+        height: 30vh;
+        transform: scale(1) translateX(50%);
+        margin: 0;
+    }
+
+    .slider-main .slider-box .slider_right .shoes_float {
+        width: 50%;
+    }
+
+    .layer_black_friday {
+        padding: 5% 0;
+    }
+
+    .policy div {
+        width: 80%;
+        padding: 4%;
+    }
+
+    .brands {
+        flex-wrap: wrap;
+    }
+
+    .brands>div {
+        width: 90%;
+    }
+
+    .brands>div>div {
+        width: 50%;
+    }
+
+    .brands div img {
+        padding: 15%;
+    }
+
+    .bottom .infor_website {
+        width: 100%;
+        justify-content: flex-start;
+        margin: 5%;
+    }
+
+    .bottom .infor_website>div {
+        width: 40%;
+        margin: 5% 0;
+    }
+
+    .bottom .infor_website p {
+        line-height: 200%;
+    }
+
+    .bottom .author {
+        width: 100%;
+        text-align: center;
+    }
+
+    .layer_black_friday {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .slider-main .slider_left h1 {
+        font-size: 1.8rem;
+    }
+
+    .slider-main .slider_left p {
+        font-size: 1.2rem;
+    }
+
+    .benefits h1 {
+        font-size: 2rem;
+    }
+
+    .benefits .box .box_policy i {
+        font-size: 1.5rem !important;
+    }
+
+    .benefits .box .box_policy div h2 {
+        font-size: 1.3rem;
+    }
+
+    .benefits .box .box_policy div p {
+        font-size: .9rem;
+    }
+
+    .brands h1 {
+        font-size: 2rem;
+        margin-bottom: 5%;
+    }
+
+    .layer_black_friday .infor {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .layer_black_friday .infor h1 {
+        font-size: 1.8rem;
+    }
+
+    .tradition {
+        width: 100%;
+    }
+
+    .tradition h1 {
+        margin-bottom: 5%;
+    }
+
+    .tradition p {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    footer .mid p {
+        font-size: 1rem;
+    }
 }

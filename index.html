@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <!-- css main -->
     <link rel="stylesheet" href="./style/style_main.css">
     <!-- css index -->
@@ -12,9 +13,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- wow js -->
+    <link rel="stylesheet" href="./node_modules\wow.js\css\libs\animate.css">
+
     <title>Home</title>
 </head>
 <body>
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    
     <header>
         <div class="header_left">
             <a href="index.html"><img src="./Images/logo.png" alt=""></a>
@@ -26,8 +42,10 @@
                 <li><a href="./about.html">About</a></li>
                 <li><a href="./contac.html">Contact</a></li>
                 <li>
-                    <span>More</span>
-                    <i class="fa-solid fa-chevron-down"></i>
+                    <div>
+                        <span>More</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
                     <ul class="list_down_shop_pages">
                         <li><a src="./account.html">My Account</a></li>
                         <li><a src="./cart.html">Cart</a></li>
@@ -43,39 +61,36 @@
                 <span><i class="fa-solid fa-bars"></i></span>
 
             </div>
-        </div>
+        </div> 
+        <div class="coating"></div>
     </header>
     <main>
         <div class="slider-container">
             <div class="slider-main">
                 <div id="slider1" class="slider-box">
                     <div class="slider_left">
-                        <h1>The brand new Shoes Air Sneaker</h1>
-                        <p>Sit amet consectetur adipisicing elit. Ipsam nulla itaque unde, adipisci vitae voluptates recusandae esse odio!</p>
+                        <div class="title">
+                            <h1>ADIDAS ALPHA BEYOND </h1>
+                            <p>Sit amet consectetur adipisicing elit. Ipsam nulla itaque unde, adipisci vitae voluptates recusandae esse odio!</p>
+                        </div>
                         <a href="" class="button_hover"><span>Shop Now</span></a>
                     </div>
                     <div class="slider_right">
-                        <svg >
-                            <circle cx="400" cy="200" r="350" stroke="black" stroke-width="0" fill="#fff5f4" />
-                        </svg>
-                        <img class="oval"src="./Images/Oval-1-300x300.png" alt="">
-                        <h1>ALPHABOUNCE BEYOND</h1>
+                        <div class="oval-pink"></div>
                         <img class="shoes_float" src="./Images/layer_adidas.png" alt="">
                     </div>
                 </div>
                 <div id="slider2" class="slider-box">
                     <div class="slider_left">
-                        <h1>The brand new Shoes Air Sneaker</h1>
-                        <p>Sit amet consectetur adipisicing elit. Ipsam nulla itaque unde, adipisci vitae voluptates recusandae esse
-                            odio!</p>
+                        <div class="title">
+                            <h1>ADIDAS PHARRELL</h1>
+                            <p>Sit amet consectetur adipisicing elit. Ipsam nulla itaque unde, adipisci vitae voluptates recusandae esse
+                                odio!</p>
+                        </div>
                         <a href="" class="button_hover"><span>Shop Now</span></a>
                     </div>
                     <div class="slider_right">
-                        <svg>
-                            <circle cx="400" cy="200" r="350" stroke="black" stroke-width="0" fill="#fff5f4" />
-                        </svg>
-                        <img class="oval" src="./Images/Oval-1-300x300.png" alt="">
-                        <h1>ADIDAS PHARRELL</h1>
+                         <div class="oval-pink"></div>
                         <img class="shoes_float" src="./Images/layer_Adidas-Pharrell.png" alt="">
                     </div>
                 </div>
@@ -108,9 +123,9 @@
         </div>
 
         <!-- Lastest -->
-        <section class="lastest">
+        <section class="lastest " >
             <div class="title">
-                <img src="./Images/Lastest/Adidas-Pharrell.png" alt="">
+                <img class="wow bounceInLeft" data-wow-duration="1s" data-wow-delay=".2s" src="./Images/Lastest/Adidas-Pharrell.png" alt="">
                 <div>
                     <p>LASTEST</p>
                     <h1>SNEAKERS</h1>
@@ -132,7 +147,7 @@
                     <p>CATEGORY</p>
                     <h1>NIKE SNEAKER</h1>
                 </div>
-                <img src="./Images/Category/Nike-Air-Max.png" alt="">
+                <img class="wow bounceInRight" data-wow-duration="1s" data-wow-delay=".2s" src="./Images/Category/Nike-Air-Max.png" alt="">
             </div>
             <div class="products">
                 <!-- <div id="Puma-Mix-Sport">
@@ -146,7 +161,7 @@
         <!-- Best Sellings -->
         <section class="best_sellings">
             <div class="title">
-                <img src="./Images/layer_adidas.png" alt="">
+                <img class="wow bounceInLeft" data-wow-duration="1s" data-wow-delay=".2s" src="./Images/layer_adidas.png" alt="">
                 <div>
                     <p>BEST SELLINGS</p>
                     <h1>SNEAKER</h1>
@@ -154,10 +169,10 @@
             </div>
             <div class="products">
                 <!-- <div id="Puma-Mix-Sport">
-                                    <img src="./Images/Lastest/Puma-Mix-Sport.png" alt="">
-                                    <span class="name_product">Puma Mix Sport</span>
-                                    <span class="price">$110.000</span>
-                                </div> -->
+                    <img src="./Images/Lastest/Puma-Mix-Sport.png" alt="">
+                    <span class="name_product">Puma Mix Sport</span>
+                    <span class="price">$110.000</span>
+                </div> -->
         
             </div>
         </section>
@@ -353,6 +368,7 @@
             </div>
         </div>
     </footer>
+    <script src="./node_modules\wow.js\dist\wow.min.js"></script>
     <script src="./app/index.js"></script>
     <script src="./app/main.js"></script>
 </body>
